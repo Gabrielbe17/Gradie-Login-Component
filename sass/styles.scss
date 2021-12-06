@@ -1,0 +1,109 @@
+@use 'abstracts/index' as *;
+
+html{
+    font-style: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    min-height: 100vh;
+    width:100%;
+    @include gridCenter();
+
+    @media screen and (min-width:800px) {
+        background: url(../Assets/Background.png) no-repeat center;
+    }
+}
+.container{
+    // Mockup Section
+    .mockup{
+        background-color: $primary;
+        color: $White;
+        text-align: center;
+
+        p{opacity: .5; font-size: 1.1rem;}
+        h1{font-size: 2.5rem;}
+
+        &__text{
+            padding: 4em 4em 0 4em;
+        }
+
+        &-img{
+            width: 100%;
+            display: flex;
+            justify-self: center;
+            max-width: 65em;
+        }
+
+        @media screen and (min-width:800px) {
+            border-radius: .7em 0 0 .7em;
+        }
+    }
+    // Login Section
+    .login{
+        background-color: $White;
+        padding: 4em 4em 0 4em;
+
+        h2{
+            font-size: 2rem;
+        }
+
+        .terms{
+            display: flex;
+            gap: 1em;
+
+            .span{
+                color: $primary;
+                position: relative;
+                font-weight: 600;
+                cursor: pointer;
+
+                &::after{
+                    content: "";
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: .15em;
+                    display: block;
+                    background-color: $primary;
+                }
+            }
+        }
+        @media screen and (min-width:800px) {
+            border-radius: 0 .8em .8em 0;
+            border: 1px solid silver;
+        }
+    }
+    form{
+        label{
+            display: block;
+            text-align: start;
+            font-weight: 600;
+        }
+        .input{
+            display: block;
+            width: 100%; 
+            box-sizing: border-box;
+            margin: 1.2em 0;
+            padding: 1em;
+            border: 1px solid $primary;
+        }
+        button{
+            width: 100%;
+            background-color: $primary;
+            color: $White;
+            border: none;
+            padding: 1em;
+            border-radius: .25em;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width:750px) {
+        @include grid();
+        max-width: 60em;
+    }
+
+}
+
+    

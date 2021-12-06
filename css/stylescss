@@ -1,0 +1,79 @@
+html {
+  font-style: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url(../Assets/Background.png) no-repeat center center;
+  background-size: cover;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+}
+main .mockup {
+  background-color: #013243;
+  text-align: center;
+  color: #fff;
+}
+main .mockup p {
+  opacity: 0.65;
+}
+main .mockup .mockup-img {
+  width: 100%;
+  max-width: 35em;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .login {
+  background-color: #fff;
+  padding: 4em;
+}
+main .login h2 {
+  font-size: 2rem;
+}
+main .login .terms {
+  display: flex;
+  gap: 1em;
+}
+main .login .terms .span {
+  color: #013243;
+  position: relative;
+}
+main .login .terms .span::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  display: block;
+  background-color: #013243;
+}
+main form label {
+  display: block;
+  text-align: start;
+  font-weight: 600;
+}
+main form .input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+main form button {
+  width: 100%;
+  background-color: #013243;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=stylescss.map */
